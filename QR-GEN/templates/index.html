@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Generator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>Welcome to QR code Generator</h1>
+            <h2>Insert link to generate QR code </h2>
+        </div>
+        <div class="pad">
+            <form action="/" method="POST" class="form-container">
+                <input type="text" name="link" class="input-field" placeholder="Enter your link here">
+                <button type="submit" class="submit-button">Generate Code</button>
+            </form>
+            
+        </div>
+    
+        <div class="generated">
+            <img src = "{{data}}" alt="" />
+            
+        </div>
+    </div>
+
+    
+</body>
+</html>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap')
+    .title {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        justify-content: center;
+        align-items: center
+    }
+
+    h2 {
+        padding-left: 2rem;
+    }
+
+
+    
+    button[type="submit"] {
+    background-color: #add8e6; 
+    color: white; 
+    padding: 5px 6px; 
+    border: none; 
+    border-radius: 7px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    }
+
+    .pad{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center
+    }
+
+    
+    .form-container {
+        width: 300px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    
+    .input-field {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        box-sizing: border-box; 
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    
+    .submit-button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        background-color: #4CAF50; 
+        color: white; /* White text color */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+
+    .submit-button:hover {
+        background-color: #87cefa; 
+    }
+
+
+    body{
+        font-family: "Kode Mono", monospace;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+
+    .generated {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+</style>
